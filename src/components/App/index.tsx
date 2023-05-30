@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import { ConnectionType, SupportedWallets } from '../../connection'
 import { Ember, Erc20, Kolnet } from '@contracts/types'
 import { useWeb3React } from '@web3-react/core'
@@ -7,6 +7,11 @@ import { useContract } from '../../hooks/useContract'
 import WalletButtons from '@components/WalletButtons'
 
 import './styles.scss'
+import {
+  useFetchOneQuery,
+  useLazyFetchOneQuery,
+} from '../../services/modules/users'
+import Counter from '@components/Counter'
 
 type Props = Record<string, unknown>
 
@@ -16,7 +21,9 @@ const App: FC<Props> = () => {
   const kolnetContract = useContract<Kolnet>(AvailableContracts.KOLNET)
   const emberContract = useContract<Ember>(AvailableContracts.EMBER)
 
-  console.log('account -', account, provider)
+  const { data, isLoading, error } = useFetchOneQuery('9')
+
+  console.log('account -', data, account, provider)
 
   const tryTransfer = async () => {
     if (tusdtContract) {
@@ -25,6 +32,10 @@ const App: FC<Props> = () => {
         '1000000',
       )
     }
+  }
+
+  if (isLoading) {
+    return <div>loading...</div>
   }
 
   return (
@@ -36,6 +47,7 @@ const App: FC<Props> = () => {
       <WalletButtons
         wallets={[ConnectionType.INJECTED, ConnectionType.WALLET_CONNECT]}
       />
+
       <button onClick={tryTransfer}>send</button>
     </div>
   )

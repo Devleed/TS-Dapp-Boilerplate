@@ -15,6 +15,7 @@ module.exports = {
       '@api': path.resolve(__dirname, 'src/api'),
       '@assets': path.resolve(__dirname, 'src/assets'),
       '@contracts': path.resolve(__dirname, 'src/contracts'),
+      '@services': path.resolve(__dirname, 'src/services'),
     },
   },
   jest: {

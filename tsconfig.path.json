@@ -8,7 +8,8 @@
       "@hooks/*": ["hooks", "hooks/*"],
       "@api/*": ["api", "api/*"],
       "@assets/*": ["assets", "assets/*"],
-      "@contracts/*": ["contracts", "contracts/*"]
+      "@contracts/*": ["contracts", "contracts/*"],
+      "@services/*": ["services", "services/*"]
     }
   }
 }
