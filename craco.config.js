@@ -12,10 +12,10 @@ module.exports = {
       '@redux': path.resolve(__dirname, 'src/redux'),
       '@utils': path.resolve(__dirname, 'src/utils'),
       '@hooks': path.resolve(__dirname, 'src/hooks'),
-      '@api': path.resolve(__dirname, 'src/api'),
       '@assets': path.resolve(__dirname, 'src/assets'),
-      '@contracts': path.resolve(__dirname, 'src/contracts'),
       '@services': path.resolve(__dirname, 'src/services'),
+      '@abis': path.resolve(__dirname, 'src/abis'),
+      '@config': path.resolve(__dirname, 'src/config'),
     },
   },
   jest: {
