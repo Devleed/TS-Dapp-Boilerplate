@@ -6,10 +6,10 @@
       "@redux/*": ["redux", "redux/*"],
       "@utils/*": ["utils", "utils/*"],
       "@hooks/*": ["hooks", "hooks/*"],
-      "@api/*": ["api", "api/*"],
       "@assets/*": ["assets", "assets/*"],
-      "@contracts/*": ["contracts", "contracts/*"],
-      "@services/*": ["services", "services/*"]
+      "@services/*": ["services", "services/*"],
+      "@abis/*": ["abis", "abis/*"],
+      "@config/*": ["config", "config/*"]
     }
   }
 }

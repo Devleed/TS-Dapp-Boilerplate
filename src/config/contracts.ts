@@ -1,0 +1,3 @@
+export enum AvailableContracts {
+  SOCIAL_BLOCKS = '0x7698b5D7869bC1A5643C4E7261Dd621cE7E8D6fF',
+}
