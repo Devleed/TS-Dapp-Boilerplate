@@ -1,3 +1,3 @@
-export default () => {
-  console.log('use hook')
-}
+export { default as useAppDispatch } from './useAppDispatch'
+export { default as useAppSelector } from './useAppSelector'
+export { default as useThemeSwitch } from './useThemeSwitch'

@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/lib/integration/react'
 import { store, persistor } from '@redux/configureStore'
 import wagmi_config from './config/wagmi'
+import MuiTheme from './theme'
 
 // WalletConnect does not work with webpack 5 i.e. react@18+
 // This is required to make it work
@@ -20,7 +21,9 @@ root.render(
   <Provider store={store}>
     <PersistGate persistor={persistor}>
       <WagmiConfig config={wagmi_config}>
-        <Wagmi />
+        <MuiTheme>
+          <Wagmi />
+        </MuiTheme>
       </WagmiConfig>
     </PersistGate>
   </Provider>,
