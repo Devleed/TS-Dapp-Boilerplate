@@ -2,7 +2,7 @@ import { goerli, mainnet } from 'viem/chains'
 import { Chain } from 'wagmi'
 
 export const mantle_testnet = {
-  id: 50001,
+  id: 5001,
   name: 'Mantle Testnet',
   network: 'mantle testnet',
   nativeCurrency: {
